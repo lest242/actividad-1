@@ -16,7 +16,7 @@ public class GameManager : MonoBehaviour
         {
             Debug.Log("Jugador estable");
         }
-        else if (vidaRestante > 0 && vidaRestante <= 30)
+        if (vidaRestante > 0 && vidaRestante <= 30)
         {
             Debug.Log("Jugador en peligro");
         }
