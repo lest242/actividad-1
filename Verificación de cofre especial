@@ -4,14 +4,21 @@ using UnityEngine.Video;
 
 public class GameManager : MonoBehaviour
 {
-    int energiaActual = 93;
-    int costoHabilidad = 20;
-
+    public bool tieneLlave = true;
+    public bool espacioDisponible = true;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        int energiaRestante = energiaActual - costoHabilidad;
-        Debug.Log("Energía restante: " + energiaRestante);
+        bool puedeAbrir = tieneLlave && espacioDisponible;
+
+        if (puedeAbrir)
+        {
+            Debug.Log("Cofre abierto");
+        }
+        else
+        {
+            Debug.Log("No puedes abrir el cofre");
+        }
     }
 
     // Update is called once per frame
