@@ -1,1 +1,35 @@
+using UnityEngine;
+using UnityEngine.InputSystem;
+using UnityEngine.Video;
 
+public class GameManager : MonoBehaviour
+{
+    public int vidaActual;
+    public int dañoRecibido;
+
+    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    void Start()
+    {
+        int vidaRestante = vidaActual - dañoRecibido;
+
+        if (vidaRestante > 30)
+        {
+            Debug.Log("Jugador estable");
+        }
+        else if (vidaRestante > 0 && vidaRestante <= 30)
+        {
+            Debug.Log("Jugador en peligro");
+        }
+        else
+        {
+            Debug.Log("Game Over");
+        }
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+      
+    }
+
+}
