@@ -1,1 +1,13 @@
+using UnityEngine;
 
+public class SistemaEnergia : MonoBehaviour
+{
+     int energiaActual = 93;
+     int costoHabilidad = 20;
+
+    void Start()
+    {
+        int energiaRestante = energiaActual - costoHabilidad;
+        Debug.Log("Energía restante: " + energiaRestante);
+    }
+}
